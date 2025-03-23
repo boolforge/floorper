@@ -1,0 +1,8 @@
+2025-03-23 00:51:01,861 - root - INFO - Detecting installed browsers from list: firefox, chrome, edge, opera, brave, vivaldi, librewolf, waterfox, pale_moon, basilisk, chromium, opera_gx, tor_browser, yandex, slimjet, seamonkey
+2025-03-23 00:51:01,863 - root - ERROR - Browser selection error: 'BrowserConfig' object has no attribute 'get_possible_paths'
+2025-03-23 00:51:29,366 - floorpizer.browser_detection - ERROR - Error analyzing profile: Database operation failed: no such table: moz_certs
+2025-03-23 00:51:29,367 - floorpizer.browser_detection - INFO - Found 2 profiles for Firefox
+2025-03-23 00:51:29,367 - floorpizer.browser_detection - INFO -  - 1pul79ql.default (C:\Users\cuenta jose\AppData\Roaming\Mozilla\Firefox\Profiles\1pul79ql.default)
+2025-03-23 00:51:29,368 - floorpizer.browser_detection - INFO -  - 5wcoxb5f.default-nightly (C:\Users\cuenta jose\AppData\Roaming\Mozilla\Firefox\Profiles\5wcoxb5f.default-nightly)
+2025-03-23 00:51:29,387 - floorpizer.browser_detection - INFO - Found 1 profiles for Google Chrome
+2025-03-23 00:51:29,387 - floorpizer.browser_detection - INFO -  - Profile 2 (C:\Users\cuenta jose\AppData\Local\Google\Chrome\User Data\Profile 2)

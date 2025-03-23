@@ -1,0 +1,355 @@
+2025-03-23 01:06:25,421 - root - INFO - Setting default browsers...
+2025-03-23 01:06:25,421 - browsermigrator.browser_detector - INFO - Found browser by executable: firefox at C:/Program Files/Mozilla Firefox/firefox.exe
+2025-03-23 01:06:25,422 - browsermigrator.browser_detector - INFO - Found browser by executable: chrome at C:/Program Files/Google/Chrome/Application/chrome.exe
+2025-03-23 01:06:25,422 - browsermigrator.browser_detector - INFO - Found browser by executable: edge at C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe
+2025-03-23 01:06:25,422 - browsermigrator.browser_detector - INFO - Found browser by executable: brave at C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe
+2025-03-23 01:06:25,423 - browsermigrator.browser_detector - INFO - Found browser by registry: firefox
+2025-03-23 01:06:25,423 - browsermigrator.browser_detector - INFO - Found browser by registry: chrome
+2025-03-23 01:06:25,423 - browsermigrator.browser_detector - INFO - Found browser by registry: edge
+2025-03-23 01:06:25,424 - browsermigrator.browser_detector - INFO - Found browser by registry: brave
+2025-03-23 01:06:25,424 - browsermigrator.browser_detector - INFO - Found browser by profile dir: firefox at C:\Users\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles
+2025-03-23 01:06:25,424 - browsermigrator.browser_detector - INFO - Found browser by profile dir: chrome at C:\Users\cuenta jose/AppData/Local/Google/Chrome/User Data
+2025-03-23 01:06:25,425 - browsermigrator.browser_detector - INFO - Found browser by profile dir: edge at C:\Users\cuenta jose/AppData/Local/Microsoft/Edge/User Data
+2025-03-23 01:06:25,425 - browsermigrator.browser_detector - INFO - Found browser by profile dir: brave at C:\Users\cuenta jose/AppData/Local/BraveSoftware/Brave-Browser/User Data
+2025-03-23 01:06:25,425 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera Stable
+2025-03-23 01:06:25,425 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera_gx at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera GX Stable
+2025-03-23 01:06:25,426 - browsermigrator.browser_detector - INFO - Found browser by profile dir: floorp at C:\Users\cuenta jose/AppData/Roaming/floorp/Profiles
+2025-03-23 01:06:25,499 - browsermigrator.browser_detector - INFO - Found browser by shortcut: edge
+2025-03-23 01:06:25,557 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:06:25,691 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:06:25,793 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:06:25,823 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:06:25,841 - root - INFO - Auto-detected browsers: opera_gx, vivaldi, edge, chrome, firefox, brave, opera, floorp, tor_browser
+2025-03-23 01:06:25,841 - root - INFO - Final browser selection: firefox, chrome, edge, brave, opera, vivaldi, opera_gx, tor_browser, floorp
+2025-03-23 01:06:25,842 - root - INFO - Starting profile detection...
+2025-03-23 01:06:25,861 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:06:25,862 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:06:25,864 - root - INFO - Found 2 profiles for Firefox
+2025-03-23 01:06:25,883 - root - INFO - Found 2 profiles for Google Chrome
+2025-03-23 01:06:25,896 - root - INFO - Found 1 profiles for Microsoft Edge
+2025-03-23 01:06:25,906 - root - INFO - Found 1 profiles for Brave
+2025-03-23 01:06:25,914 - root - INFO - Found 3 profiles for Opera
+2025-03-23 01:06:25,923 - root - INFO - No profiles found for Vivaldi
+2025-03-23 01:06:25,955 - root - INFO - Found 77 profiles for Opera GX
+2025-03-23 01:06:26,110 - root - INFO - No profiles found for Tor Browser
+2025-03-23 01:06:26,115 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:06:26,117 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:06:26,118 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:06:26,121 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:06:26,123 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:06:26,124 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:06:26,126 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:06:26,130 - root - INFO - Found 7 profiles for Floorp
+2025-03-23 01:06:26,151 - root - INFO - Profile detection complete. Found 93 profiles.
+2025-03-23 01:21:03,561 - root - INFO - Refreshing browser list...
+2025-03-23 01:21:03,562 - root - INFO - No browsers selected! Force-selecting Firefox and Chrome.
+2025-03-23 01:21:03,563 - root - INFO - Setting default browsers...
+2025-03-23 01:21:03,563 - browsermigrator.browser_detector - INFO - Found browser by executable: firefox at C:/Program Files/Mozilla Firefox/firefox.exe
+2025-03-23 01:21:03,563 - browsermigrator.browser_detector - INFO - Found browser by executable: chrome at C:/Program Files/Google/Chrome/Application/chrome.exe
+2025-03-23 01:21:03,563 - browsermigrator.browser_detector - INFO - Found browser by executable: edge at C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe
+2025-03-23 01:21:03,564 - browsermigrator.browser_detector - INFO - Found browser by executable: brave at C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe
+2025-03-23 01:21:03,564 - browsermigrator.browser_detector - INFO - Found browser by executable: librewolf at C:/Program Files/LibreWolf/librewolf.exe
+2025-03-23 01:21:03,564 - browsermigrator.browser_detector - INFO - Found browser by executable: waterfox at C:/Program Files/Waterfox/waterfox.exe
+2025-03-23 01:21:03,564 - browsermigrator.browser_detector - INFO - Found browser by executable: pale_moon at C:/Program Files/Pale Moon/palemoon.exe
+2025-03-23 01:21:03,564 - browsermigrator.browser_detector - INFO - Found browser by executable: basilisk at C:/Program Files/Basilisk/basilisk.exe
+2025-03-23 01:21:03,565 - browsermigrator.browser_detector - INFO - Found browser by executable: seamonkey at C:/Program Files (x86)/SeaMonkey/seamonkey.exe
+2025-03-23 01:21:03,565 - browsermigrator.browser_detector - INFO - Found browser by registry: firefox
+2025-03-23 01:21:03,565 - browsermigrator.browser_detector - INFO - Found browser by registry: chrome
+2025-03-23 01:21:03,565 - browsermigrator.browser_detector - INFO - Found browser by registry: edge
+2025-03-23 01:21:03,565 - browsermigrator.browser_detector - INFO - Found browser by registry: brave
+2025-03-23 01:21:03,566 - browsermigrator.browser_detector - INFO - Found browser by profile dir: firefox at C:\Users\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles
+2025-03-23 01:21:03,566 - browsermigrator.browser_detector - INFO - Found browser by profile dir: chrome at C:\Users\cuenta jose/AppData/Local/Google/Chrome/User Data
+2025-03-23 01:21:03,566 - browsermigrator.browser_detector - INFO - Found browser by profile dir: edge at C:\Users\cuenta jose/AppData/Local/Microsoft/Edge/User Data
+2025-03-23 01:21:03,566 - browsermigrator.browser_detector - INFO - Found browser by profile dir: brave at C:\Users\cuenta jose/AppData/Local/BraveSoftware/Brave-Browser/User Data
+2025-03-23 01:21:03,566 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera Stable
+2025-03-23 01:21:03,567 - browsermigrator.browser_detector - INFO - Found browser by profile dir: waterfox at C:\Users\cuenta jose/AppData/Roaming/Waterfox/Profiles
+2025-03-23 01:21:03,567 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera_gx at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera GX Stable
+2025-03-23 01:21:03,567 - browsermigrator.browser_detector - INFO - Found browser by profile dir: seamonkey at C:\Users\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles
+2025-03-23 01:21:03,567 - browsermigrator.browser_detector - INFO - Found browser by profile dir: floorp at C:\Users\cuenta jose/AppData/Roaming/floorp/Profiles
+2025-03-23 01:21:03,636 - browsermigrator.browser_detector - INFO - Found browser by shortcut: edge
+2025-03-23 01:21:03,693 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:21:03,822 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:21:03,919 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:21:03,948 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:21:03,966 - root - INFO - Auto-detected browsers: librewolf, basilisk, opera_gx, waterfox, vivaldi, pale_moon, edge, chrome, firefox, brave, seamonkey, opera, floorp, tor_browser
+2025-03-23 01:21:03,967 - root - INFO - Final browser selection: firefox, chrome, edge, brave, opera, vivaldi, librewolf, waterfox, pale_moon, basilisk, opera_gx, tor_browser, seamonkey, floorp
+2025-03-23 01:21:03,968 - root - INFO - Starting profile detection...
+2025-03-23 01:21:03,987 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:21:03,987 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:21:03,988 - root - INFO - Found 2 profiles for Firefox
+2025-03-23 01:21:04,003 - root - INFO - Found 2 profiles for Google Chrome
+2025-03-23 01:21:04,014 - root - INFO - Found 1 profiles for Microsoft Edge
+2025-03-23 01:21:04,029 - root - INFO - Found 1 profiles for Brave
+2025-03-23 01:21:04,042 - root - INFO - Found 3 profiles for Opera
+2025-03-23 01:21:04,053 - root - INFO - No profiles found for Vivaldi
+2025-03-23 01:21:04,056 - root - INFO - No profiles found for LibreWolf
+2025-03-23 01:21:04,059 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Waterfox/Profiles\\Profiles/q5hty4vb.68-edition-default'
+2025-03-23 01:21:04,061 - root - INFO - Found 1 profiles for Waterfox
+2025-03-23 01:21:04,071 - root - INFO - No profiles found for Pale Moon
+2025-03-23 01:21:04,075 - root - INFO - No profiles found for Basilisk
+2025-03-23 01:21:04,092 - root - INFO - Found 77 profiles for Opera GX
+2025-03-23 01:21:04,250 - root - INFO - No profiles found for Tor Browser
+2025-03-23 01:21:04,253 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles\\Profiles/eopyu1ko.default'
+2025-03-23 01:21:04,254 - root - INFO - Found 1 profiles for SeaMonkey
+2025-03-23 01:21:04,261 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:21:04,261 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:21:04,262 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:21:04,287 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:21:04,290 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:21:04,291 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:21:04,293 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:21:04,294 - root - INFO - Found 7 profiles for Floorp
+2025-03-23 01:21:04,317 - root - INFO - Profile detection complete. Found 95 profiles.
+2025-03-23 01:25:07,849 - root - INFO - Refreshing browser list...
+2025-03-23 01:25:07,850 - root - INFO - No browsers selected! Force-selecting Firefox and Chrome.
+2025-03-23 01:25:07,851 - root - INFO - Setting default browsers...
+2025-03-23 01:25:07,852 - browsermigrator.browser_detector - INFO - Found browser by executable: firefox at C:/Program Files/Mozilla Firefox/firefox.exe
+2025-03-23 01:25:07,852 - browsermigrator.browser_detector - INFO - Found browser by executable: chrome at C:/Program Files/Google/Chrome/Application/chrome.exe
+2025-03-23 01:25:07,852 - browsermigrator.browser_detector - INFO - Found browser by executable: edge at C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe
+2025-03-23 01:25:07,852 - browsermigrator.browser_detector - INFO - Found browser by executable: brave at C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe
+2025-03-23 01:25:07,852 - browsermigrator.browser_detector - INFO - Found browser by executable: librewolf at C:/Program Files/LibreWolf/librewolf.exe
+2025-03-23 01:25:07,853 - browsermigrator.browser_detector - INFO - Found browser by executable: waterfox at C:/Program Files/Waterfox/waterfox.exe
+2025-03-23 01:25:07,853 - browsermigrator.browser_detector - INFO - Found browser by executable: pale_moon at C:/Program Files/Pale Moon/palemoon.exe
+2025-03-23 01:25:07,853 - browsermigrator.browser_detector - INFO - Found browser by executable: basilisk at C:/Program Files/Basilisk/basilisk.exe
+2025-03-23 01:25:07,853 - browsermigrator.browser_detector - INFO - Found browser by executable: slimjet at C:/Program Files/Slimjet/slimjet.exe
+2025-03-23 01:25:07,853 - browsermigrator.browser_detector - INFO - Found browser by executable: seamonkey at C:/Program Files (x86)/SeaMonkey/seamonkey.exe
+2025-03-23 01:25:07,854 - browsermigrator.browser_detector - INFO - Found browser by registry: firefox
+2025-03-23 01:25:07,854 - browsermigrator.browser_detector - INFO - Found browser by registry: chrome
+2025-03-23 01:25:07,854 - browsermigrator.browser_detector - INFO - Found browser by registry: edge
+2025-03-23 01:25:07,854 - browsermigrator.browser_detector - INFO - Found browser by registry: brave
+2025-03-23 01:25:07,854 - browsermigrator.browser_detector - INFO - Found browser by registry: slimjet
+2025-03-23 01:25:07,854 - browsermigrator.browser_detector - INFO - Found browser by profile dir: firefox at C:\Users\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles
+2025-03-23 01:25:07,854 - browsermigrator.browser_detector - INFO - Found browser by profile dir: chrome at C:\Users\cuenta jose/AppData/Local/Google/Chrome/User Data
+2025-03-23 01:25:07,855 - browsermigrator.browser_detector - INFO - Found browser by profile dir: edge at C:\Users\cuenta jose/AppData/Local/Microsoft/Edge/User Data
+2025-03-23 01:25:07,855 - browsermigrator.browser_detector - INFO - Found browser by profile dir: brave at C:\Users\cuenta jose/AppData/Local/BraveSoftware/Brave-Browser/User Data
+2025-03-23 01:25:07,855 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera Stable
+2025-03-23 01:25:07,855 - browsermigrator.browser_detector - INFO - Found browser by profile dir: waterfox at C:\Users\cuenta jose/AppData/Roaming/Waterfox/Profiles
+2025-03-23 01:25:07,855 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera_gx at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera GX Stable
+2025-03-23 01:25:07,855 - browsermigrator.browser_detector - INFO - Found browser by profile dir: yandex at C:\Users\cuenta jose/AppData/Local/Yandex/YandexBrowser/User Data
+2025-03-23 01:25:07,856 - browsermigrator.browser_detector - INFO - Found browser by profile dir: slimjet at C:\Users\cuenta jose/AppData/Local/Slimjet/User Data
+2025-03-23 01:25:07,856 - browsermigrator.browser_detector - INFO - Found browser by profile dir: seamonkey at C:\Users\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles
+2025-03-23 01:25:07,857 - browsermigrator.browser_detector - INFO - Found browser by profile dir: floorp at C:\Users\cuenta jose/AppData/Roaming/floorp/Profiles
+2025-03-23 01:25:07,937 - browsermigrator.browser_detector - INFO - Found browser by shortcut: edge
+2025-03-23 01:25:07,994 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:25:08,127 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:25:08,226 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:25:08,255 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:25:08,274 - root - INFO - Auto-detected browsers: librewolf, basilisk, opera_gx, waterfox, vivaldi, pale_moon, edge, slimjet, chrome, firefox, yandex, brave, seamonkey, opera, floorp, tor_browser
+2025-03-23 01:25:08,275 - root - INFO - Final browser selection: firefox, chrome, edge, brave, opera, vivaldi, librewolf, waterfox, pale_moon, basilisk, opera_gx, tor_browser, yandex, slimjet, seamonkey, floorp
+2025-03-23 01:25:08,276 - root - INFO - Starting profile detection...
+2025-03-23 01:25:08,280 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:25:08,281 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:25:08,294 - root - INFO - Found 2 profiles for Firefox
+2025-03-23 01:25:08,312 - root - INFO - Found 2 profiles for Google Chrome
+2025-03-23 01:25:08,326 - root - INFO - Found 1 profiles for Microsoft Edge
+2025-03-23 01:25:08,339 - root - INFO - Found 1 profiles for Brave
+2025-03-23 01:25:08,347 - root - INFO - Found 3 profiles for Opera
+2025-03-23 01:25:08,359 - root - INFO - No profiles found for Vivaldi
+2025-03-23 01:25:08,363 - root - INFO - No profiles found for LibreWolf
+2025-03-23 01:25:08,369 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Waterfox/Profiles\\Profiles/q5hty4vb.68-edition-default'
+2025-03-23 01:25:08,371 - root - INFO - Found 1 profiles for Waterfox
+2025-03-23 01:25:08,378 - root - INFO - No profiles found for Pale Moon
+2025-03-23 01:25:08,382 - root - INFO - No profiles found for Basilisk
+2025-03-23 01:25:08,397 - root - INFO - Found 77 profiles for Opera GX
+2025-03-23 01:25:08,564 - root - INFO - No profiles found for Tor Browser
+2025-03-23 01:25:08,569 - root - INFO - Found 1 profiles for Yandex Browser
+2025-03-23 01:25:08,576 - root - INFO - Found 1 profiles for Slimjet
+2025-03-23 01:25:08,583 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles\\Profiles/eopyu1ko.default'
+2025-03-23 01:25:08,584 - root - INFO - Found 1 profiles for SeaMonkey
+2025-03-23 01:25:08,590 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:08,591 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:08,591 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:08,593 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:08,594 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:08,595 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:08,596 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:08,598 - root - INFO - Found 7 profiles for Floorp
+2025-03-23 01:25:08,617 - root - INFO - Profile detection complete. Found 97 profiles.
+2025-03-23 01:25:42,562 - root - INFO - Starting profile detection...
+2025-03-23 01:25:42,565 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:25:42,566 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:25:42,567 - root - INFO - Found 2 profiles for Firefox
+2025-03-23 01:25:42,581 - root - INFO - Found 2 profiles for Google Chrome
+2025-03-23 01:25:42,594 - root - INFO - Found 1 profiles for Microsoft Edge
+2025-03-23 01:25:42,605 - root - INFO - Found 1 profiles for Brave
+2025-03-23 01:25:42,613 - root - INFO - Found 3 profiles for Opera
+2025-03-23 01:25:42,625 - root - INFO - No profiles found for Vivaldi
+2025-03-23 01:25:42,629 - root - INFO - No profiles found for LibreWolf
+2025-03-23 01:25:42,633 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Waterfox/Profiles\\Profiles/q5hty4vb.68-edition-default'
+2025-03-23 01:25:42,634 - root - INFO - Found 1 profiles for Waterfox
+2025-03-23 01:25:42,642 - root - INFO - No profiles found for Pale Moon
+2025-03-23 01:25:42,646 - root - INFO - No profiles found for Basilisk
+2025-03-23 01:25:42,662 - root - INFO - Found 77 profiles for Opera GX
+2025-03-23 01:25:42,833 - root - INFO - No profiles found for Tor Browser
+2025-03-23 01:25:42,837 - root - INFO - Found 1 profiles for Yandex Browser
+2025-03-23 01:25:42,845 - root - INFO - Found 1 profiles for Slimjet
+2025-03-23 01:25:42,852 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles\\Profiles/eopyu1ko.default'
+2025-03-23 01:25:42,852 - root - INFO - Found 1 profiles for SeaMonkey
+2025-03-23 01:25:42,859 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:42,860 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:42,860 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:42,861 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:42,862 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:42,863 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:42,863 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:25:42,864 - root - INFO - Found 7 profiles for Floorp
+2025-03-23 01:25:42,884 - root - INFO - Profile detection complete. Found 97 profiles.
+2025-03-23 01:32:40,621 - root - INFO - Refreshing browser list...
+2025-03-23 01:32:40,623 - root - INFO - No browsers selected! Force-selecting Firefox and Chrome.
+2025-03-23 01:32:40,623 - root - INFO - Setting default browsers...
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: firefox at C:/Program Files/Mozilla Firefox/firefox.exe
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: chrome at C:/Program Files/Google/Chrome/Application/chrome.exe
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: edge at C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: brave at C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: librewolf at C:/Program Files/LibreWolf/librewolf.exe
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: waterfox at C:/Program Files/Waterfox/waterfox.exe
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: pale_moon at C:/Program Files/Pale Moon/palemoon.exe
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: basilisk at C:/Program Files/Basilisk/basilisk.exe
+2025-03-23 01:32:40,624 - browsermigrator.browser_detector - INFO - Found browser by executable: slimjet at C:/Program Files/Slimjet/slimjet.exe
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by executable: seamonkey at C:/Program Files (x86)/SeaMonkey/seamonkey.exe
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by registry: firefox
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by registry: chrome
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by registry: edge
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by registry: brave
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by registry: slimjet
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by profile dir: firefox at C:\Users\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by profile dir: chrome at C:\Users\cuenta jose/AppData/Local/Google/Chrome/User Data
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by profile dir: edge at C:\Users\cuenta jose/AppData/Local/Microsoft/Edge/User Data
+2025-03-23 01:32:40,625 - browsermigrator.browser_detector - INFO - Found browser by profile dir: brave at C:\Users\cuenta jose/AppData/Local/BraveSoftware/Brave-Browser/User Data
+2025-03-23 01:32:40,626 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera Stable
+2025-03-23 01:32:40,626 - browsermigrator.browser_detector - INFO - Found browser by profile dir: waterfox at C:\Users\cuenta jose/AppData/Roaming/Waterfox/Profiles
+2025-03-23 01:32:40,626 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera_gx at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera GX Stable
+2025-03-23 01:32:40,626 - browsermigrator.browser_detector - INFO - Found browser by profile dir: yandex at C:\Users\cuenta jose/AppData/Local/Yandex/YandexBrowser/User Data
+2025-03-23 01:32:40,626 - browsermigrator.browser_detector - INFO - Found browser by profile dir: slimjet at C:\Users\cuenta jose/AppData/Local/Slimjet/User Data
+2025-03-23 01:32:40,626 - browsermigrator.browser_detector - INFO - Found browser by profile dir: seamonkey at C:\Users\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles
+2025-03-23 01:32:40,626 - browsermigrator.browser_detector - INFO - Found browser by profile dir: floorp at C:\Users\cuenta jose/AppData/Roaming/floorp/Profiles
+2025-03-23 01:32:40,692 - browsermigrator.browser_detector - INFO - Found browser by shortcut: edge
+2025-03-23 01:32:40,729 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:32:40,818 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:32:40,889 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:32:40,909 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:32:40,923 - root - INFO - Auto-detected browsers: librewolf, basilisk, opera_gx, waterfox, vivaldi, pale_moon, edge, slimjet, chrome, firefox, yandex, brave, seamonkey, opera, floorp, tor_browser
+2025-03-23 01:32:40,924 - root - INFO - Final browser selection: firefox, chrome, edge, brave, opera, vivaldi, librewolf, waterfox, pale_moon, basilisk, opera_gx, tor_browser, yandex, slimjet, seamonkey, floorp
+2025-03-23 01:32:40,925 - root - INFO - Starting profile detection...
+2025-03-23 01:32:40,944 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:32:40,945 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:32:40,946 - root - INFO - Found 2 profiles for Firefox
+2025-03-23 01:32:40,956 - root - INFO - Found 2 profiles for Google Chrome
+2025-03-23 01:32:40,965 - root - INFO - Found 1 profiles for Microsoft Edge
+2025-03-23 01:32:40,971 - root - INFO - Found 1 profiles for Brave
+2025-03-23 01:32:40,975 - root - INFO - Found 3 profiles for Opera
+2025-03-23 01:32:40,982 - root - INFO - No profiles found for Vivaldi
+2025-03-23 01:32:40,984 - root - INFO - No profiles found for LibreWolf
+2025-03-23 01:32:40,987 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Waterfox/Profiles\\Profiles/q5hty4vb.68-edition-default'
+2025-03-23 01:32:40,987 - root - INFO - Found 1 profiles for Waterfox
+2025-03-23 01:32:40,993 - root - INFO - No profiles found for Pale Moon
+2025-03-23 01:32:40,995 - root - INFO - No profiles found for Basilisk
+2025-03-23 01:32:41,007 - root - INFO - Found 77 profiles for Opera GX
+2025-03-23 01:32:41,115 - root - INFO - No profiles found for Tor Browser
+2025-03-23 01:32:41,124 - root - INFO - Found 1 profiles for Yandex Browser
+2025-03-23 01:32:41,130 - root - INFO - Found 1 profiles for Slimjet
+2025-03-23 01:32:41,135 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles\\Profiles/eopyu1ko.default'
+2025-03-23 01:32:41,136 - root - INFO - Found 1 profiles for SeaMonkey
+2025-03-23 01:32:41,141 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:41,141 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:41,142 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:41,143 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:41,144 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:41,144 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:41,145 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:41,146 - root - INFO - Found 7 profiles for Floorp
+2025-03-23 01:32:41,162 - root - INFO - Profile detection complete. Found 97 profiles.
+2025-03-23 01:32:48,318 - root - INFO - Starting profile detection...
+2025-03-23 01:32:48,321 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:32:48,322 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:32:48,322 - root - INFO - Found 2 profiles for Firefox
+2025-03-23 01:32:48,334 - root - INFO - Found 2 profiles for Google Chrome
+2025-03-23 01:32:48,346 - root - INFO - Found 1 profiles for Microsoft Edge
+2025-03-23 01:32:48,353 - root - INFO - Found 1 profiles for Brave
+2025-03-23 01:32:48,359 - root - INFO - Found 3 profiles for Opera
+2025-03-23 01:32:48,369 - root - INFO - No profiles found for Vivaldi
+2025-03-23 01:32:48,372 - root - INFO - No profiles found for LibreWolf
+2025-03-23 01:32:48,375 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Waterfox/Profiles\\Profiles/q5hty4vb.68-edition-default'
+2025-03-23 01:32:48,376 - root - INFO - Found 1 profiles for Waterfox
+2025-03-23 01:32:48,381 - root - INFO - No profiles found for Pale Moon
+2025-03-23 01:32:48,385 - root - INFO - No profiles found for Basilisk
+2025-03-23 01:32:48,400 - root - INFO - Found 77 profiles for Opera GX
+2025-03-23 01:32:48,559 - root - INFO - No profiles found for Tor Browser
+2025-03-23 01:32:48,567 - root - INFO - Found 1 profiles for Yandex Browser
+2025-03-23 01:32:48,574 - root - INFO - Found 1 profiles for Slimjet
+2025-03-23 01:32:48,579 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles\\Profiles/eopyu1ko.default'
+2025-03-23 01:32:48,580 - root - INFO - Found 1 profiles for SeaMonkey
+2025-03-23 01:32:48,586 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:48,587 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:48,587 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:48,588 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:48,588 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:48,589 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:48,590 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:32:48,590 - root - INFO - Found 7 profiles for Floorp
+2025-03-23 01:32:48,610 - root - INFO - Profile detection complete. Found 97 profiles.
+2025-03-23 01:36:02,485 - root - INFO - Refreshing browser list...
+2025-03-23 01:36:02,486 - root - INFO - No browsers selected! Force-selecting Firefox and Chrome.
+2025-03-23 01:36:02,488 - root - INFO - Setting default browsers...
+2025-03-23 01:36:02,488 - browsermigrator.browser_detector - INFO - Found browser by executable: firefox at C:/Program Files/Mozilla Firefox/firefox.exe
+2025-03-23 01:36:02,488 - browsermigrator.browser_detector - INFO - Found browser by executable: chrome at C:/Program Files/Google/Chrome/Application/chrome.exe
+2025-03-23 01:36:02,489 - browsermigrator.browser_detector - INFO - Found browser by executable: edge at C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe
+2025-03-23 01:36:02,489 - browsermigrator.browser_detector - INFO - Found browser by executable: brave at C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe
+2025-03-23 01:36:02,489 - browsermigrator.browser_detector - INFO - Found browser by executable: librewolf at C:/Program Files/LibreWolf/librewolf.exe
+2025-03-23 01:36:02,489 - browsermigrator.browser_detector - INFO - Found browser by executable: waterfox at C:/Program Files/Waterfox/waterfox.exe
+2025-03-23 01:36:02,490 - browsermigrator.browser_detector - INFO - Found browser by executable: pale_moon at C:/Program Files/Pale Moon/palemoon.exe
+2025-03-23 01:36:02,490 - browsermigrator.browser_detector - INFO - Found browser by executable: basilisk at C:/Program Files/Basilisk/basilisk.exe
+2025-03-23 01:36:02,491 - browsermigrator.browser_detector - INFO - Found browser by executable: slimjet at C:/Program Files/Slimjet/slimjet.exe
+2025-03-23 01:36:02,491 - browsermigrator.browser_detector - INFO - Found browser by executable: seamonkey at C:/Program Files (x86)/SeaMonkey/seamonkey.exe
+2025-03-23 01:36:02,491 - browsermigrator.browser_detector - INFO - Found browser by registry: firefox
+2025-03-23 01:36:02,492 - browsermigrator.browser_detector - INFO - Found browser by registry: chrome
+2025-03-23 01:36:02,492 - browsermigrator.browser_detector - INFO - Found browser by registry: edge
+2025-03-23 01:36:02,492 - browsermigrator.browser_detector - INFO - Found browser by registry: brave
+2025-03-23 01:36:02,492 - browsermigrator.browser_detector - INFO - Found browser by registry: slimjet
+2025-03-23 01:36:02,493 - browsermigrator.browser_detector - INFO - Found browser by profile dir: firefox at C:\Users\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles
+2025-03-23 01:36:02,493 - browsermigrator.browser_detector - INFO - Found browser by profile dir: chrome at C:\Users\cuenta jose/AppData/Local/Google/Chrome/User Data
+2025-03-23 01:36:02,493 - browsermigrator.browser_detector - INFO - Found browser by profile dir: edge at C:\Users\cuenta jose/AppData/Local/Microsoft/Edge/User Data
+2025-03-23 01:36:02,493 - browsermigrator.browser_detector - INFO - Found browser by profile dir: brave at C:\Users\cuenta jose/AppData/Local/BraveSoftware/Brave-Browser/User Data
+2025-03-23 01:36:02,493 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera Stable
+2025-03-23 01:36:02,494 - browsermigrator.browser_detector - INFO - Found browser by profile dir: waterfox at C:\Users\cuenta jose/AppData/Roaming/Waterfox/Profiles
+2025-03-23 01:36:02,495 - browsermigrator.browser_detector - INFO - Found browser by profile dir: opera_gx at C:\Users\cuenta jose/AppData/Roaming/Opera Software/Opera GX Stable
+2025-03-23 01:36:02,495 - browsermigrator.browser_detector - INFO - Found browser by profile dir: yandex at C:\Users\cuenta jose/AppData/Local/Yandex/YandexBrowser/User Data
+2025-03-23 01:36:02,495 - browsermigrator.browser_detector - INFO - Found browser by profile dir: slimjet at C:\Users\cuenta jose/AppData/Local/Slimjet/User Data
+2025-03-23 01:36:02,495 - browsermigrator.browser_detector - INFO - Found browser by profile dir: seamonkey at C:\Users\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles
+2025-03-23 01:36:02,495 - browsermigrator.browser_detector - INFO - Found browser by profile dir: floorp at C:\Users\cuenta jose/AppData/Roaming/floorp/Profiles
+2025-03-23 01:36:02,597 - browsermigrator.browser_detector - INFO - Found browser by shortcut: edge
+2025-03-23 01:36:02,676 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:36:02,806 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:36:02,910 - browsermigrator.browser_detector - INFO - Found browser by shortcut: vivaldi
+2025-03-23 01:36:02,943 - browsermigrator.browser_detector - INFO - Found browser by shortcut: tor_browser
+2025-03-23 01:36:02,963 - root - INFO - Auto-detected browsers: librewolf, basilisk, opera_gx, waterfox, vivaldi, pale_moon, edge, slimjet, chrome, firefox, yandex, brave, seamonkey, opera, floorp, tor_browser
+2025-03-23 01:36:02,965 - root - INFO - Final browser selection: firefox, chrome, edge, brave, opera, vivaldi, librewolf, waterfox, pale_moon, basilisk, opera_gx, tor_browser, yandex, slimjet, seamonkey, floorp
+2025-03-23 01:36:02,966 - root - INFO - Starting profile detection...
+2025-03-23 01:36:02,968 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:36:02,969 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/Firefox/Profiles\\Profiles/1pul79ql.default'
+2025-03-23 01:36:02,971 - root - INFO - Found 2 profiles for Firefox
+2025-03-23 01:36:02,987 - root - INFO - Found 2 profiles for Google Chrome
+2025-03-23 01:36:03,000 - root - INFO - Found 1 profiles for Microsoft Edge
+2025-03-23 01:36:03,009 - root - INFO - Found 1 profiles for Brave
+2025-03-23 01:36:03,016 - root - INFO - Found 3 profiles for Opera
+2025-03-23 01:36:03,027 - root - INFO - No profiles found for Vivaldi
+2025-03-23 01:36:03,030 - root - INFO - No profiles found for LibreWolf
+2025-03-23 01:36:03,034 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Waterfox/Profiles\\Profiles/q5hty4vb.68-edition-default'
+2025-03-23 01:36:03,035 - root - INFO - Found 1 profiles for Waterfox
+2025-03-23 01:36:03,041 - root - INFO - No profiles found for Pale Moon
+2025-03-23 01:36:03,044 - root - INFO - No profiles found for Basilisk
+2025-03-23 01:36:03,057 - root - INFO - Found 77 profiles for Opera GX
+2025-03-23 01:36:03,208 - root - INFO - No profiles found for Tor Browser
+2025-03-23 01:36:03,217 - root - INFO - Found 1 profiles for Yandex Browser
+2025-03-23 01:36:03,224 - root - INFO - Found 1 profiles for Slimjet
+2025-03-23 01:36:03,230 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/Mozilla/SeaMonkey/Profiles\\Profiles/eopyu1ko.default'
+2025-03-23 01:36:03,231 - root - INFO - Found 1 profiles for SeaMonkey
+2025-03-23 01:36:03,238 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:36:03,239 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:36:03,240 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:36:03,240 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:36:03,241 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:36:03,242 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:36:03,242 - browsermigrator.browser_detector - WARNING - Error parsing profiles.ini: [WinError 3] El sistema no puede encontrar la ruta especificada: 'C:\\Users\\cuenta jose/AppData/Roaming/floorp/Profiles\\Profiles/hu849yq5.default'
+2025-03-23 01:36:03,244 - root - INFO - Found 7 profiles for Floorp
+2025-03-23 01:36:03,266 - root - INFO - Profile detection complete. Found 97 profiles.

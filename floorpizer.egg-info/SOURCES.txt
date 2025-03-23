@@ -1,0 +1,17 @@
+README.md
+setup.py
+floorpizer/__init__.py
+floorpizer/__main__.py
+floorpizer/browser_detection.py
+floorpizer/config.py
+floorpizer/floorpizer.py
+floorpizer/gui.py
+floorpizer/profile_migration.py
+floorpizer/setup.py
+floorpizer/utils.py
+floorpizer.egg-info/PKG-INFO
+floorpizer.egg-info/SOURCES.txt
+floorpizer.egg-info/dependency_links.txt
+floorpizer.egg-info/entry_points.txt
+floorpizer.egg-info/requires.txt
+floorpizer.egg-info/top_level.txt
