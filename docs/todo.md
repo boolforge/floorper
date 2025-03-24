@@ -19,12 +19,12 @@
 - [x] Develop modern TUI using Textual
 - [x] Enhance PyQt6 GUI
 - [x] Implement comprehensive CLI
-- [ ] Make sure floorper shows GUI with not option/flag passed
+- [x] Make sure floorper shows GUI when no options/flags are passed
 
 ## Testing and Optimization
-- [ ] Massive and very strict and very deep compatibility testing with all possible supported browsers (installing them first, including Floorp too) with all possible corner cases
+- [ ] Perform rigorous compatibility testing with all supported browsers (including installation verification for Floorp and others) covering all edge cases
 - [x] Optimize performance with caching and parallel processing
-- [ ] Use exclusively the best TUI implementation, remove the others and keep improving it.
+- [ ] Maintain and improve TUI implementation
 - [ ] Update documentation
 - [ ] Ensure CLI functionality
 - [ ] Ensure TUI functionality
