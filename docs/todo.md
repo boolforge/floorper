@@ -19,16 +19,23 @@
 - [x] Develop modern TUI using Textual
 - [x] Enhance PyQt6 GUI
 - [x] Implement comprehensive CLI
+- [ ] Make sure floorper shows GUI with not option/flag passed
 
 ## Testing and Optimization
-- [x] Test compatibility with various browsers
+- [ ] Massive and very strict and very deep compatibility testing with all possible supported browsers (installing them first, including Floorp too) with all possible corner cases
 - [x] Optimize performance with caching and parallel processing
-- [x] Update documentation
+- [ ] Use exclusively the best TUI implementation, remove the others and keep improving it.
+- [ ] Update documentation
 - [ ] Ensure CLI functionality
+- [ ] Ensure TUI functionality
+- [ ] Ensure GUI functionality
 - [ ] Implement consistent UX across all interfaces
+- [ ] Improve *ALL* browser support to be totally implemented
+- [ ] Code cleaning and make it easier to read it for humans
 
 ## Testing Phase
-- [ ] Test browser compatibility
+- [ ] Test ALL browser compatibility
+- [ ] Improve browser compatibility based in the results of the tests
 - [ ] Test cross-platform functionality
 - [ ] Test backup and restoration features
 - [ ] Test migration functionality
@@ -38,7 +45,7 @@
 - [ ] Reduce memory usage
 - [ ] Improve startup time
 - [ ] Enhance migration speed
-
+- [ ] Show progress bars and all kind of feedback about what the app is doing
 ## Documentation Phase
 - [ ] Update API documentation
 - [ ] Update user guide
@@ -49,4 +56,5 @@
 ## Finalization Phase
 - [ ] Final code review
 - [ ] Final testing
+- [ ] Create very extensive reports of ALL changes to push it later to the repository
 - [ ] Push changes to repository
