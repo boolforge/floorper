@@ -1,29 +1,23 @@
-# Floorper - Universal Browser Profile Migration Tool for Floorp
+# Floorper
 
-![Floorper Logo](docs/images/floorper_logo.png)
-
-Floorper is a comprehensive tool designed specifically for migrating browser profiles from various browsers to Floorp. It supports a wide range of browsers, including mainstream browsers, exotic browsers, and even text-based browsers.
+Floorper is a comprehensive browser profile migration and management tool that allows users to detect, backup, restore, and migrate profiles between different browsers.
 
 ## Features
 
-- **Universal Browser Support**: Migrate profiles from Firefox, Chrome, Edge, Brave, Opera, and many more browsers to Floorp
-- **Cross-Platform Compatibility**: Works on Windows, macOS, Linux, Haiku, and OS/2
-- **Three Interface Options**: 
-  - Modern PyQt6 GUI for desktop users
-  - Advanced TUI (Text User Interface) for terminal environments
-  - Powerful CLI for scripting and automation
-- **Comprehensive Migration**: Transfers bookmarks, history, passwords, cookies, extensions, and more
-- **Smart Merging**: Intelligently merges content without overwriting existing Floorp data
-- **Exotic Browser Support**: Includes support for text-based browsers like ELinks, w3m, and Lynx
-- **Robust Error Handling**: Ensures reliable migration even with incomplete or corrupted profiles
+- **Multi-browser Support**: Detect and migrate profiles from various browsers, including exotic and retro browsers
+- **Multiple Interfaces**: Choose between GUI (PyQt6), TUI (Textual), or CLI interfaces
+- **Profile Migration**: Migrate bookmarks, history, cookies, passwords, and other data between browsers
+- **Backup & Restore**: Create and manage backups of browser profiles
+- **Performance Optimized**: Utilizes caching and parallel processing for efficient operations
+- **Cross-platform**: Works on Windows, macOS, and Linux
 
 ## Installation
 
 ### Prerequisites
 
-- Python 3.7 or higher
-- PyQt6 (for GUI version)
-- Rich (for TUI version)
+- Python 3.8 or higher
+- PyQt6 (for GUI interface)
+- Textual (for TUI interface)
 
 ### Install from PyPI
 
@@ -41,120 +35,102 @@ pip install -e .
 
 ## Usage
 
-### GUI Mode
-
-Launch the graphical interface:
+### Graphical User Interface (GUI)
 
 ```bash
-floorper-gui
+floorper --gui
 ```
 
-Or run directly from the source:
+### Text User Interface (TUI)
 
 ```bash
-python run_floorper_qt.py
+floorper
+# or
+floorper --tui
 ```
 
-### TUI Mode
+### Command Line Interface (CLI)
 
-Launch the text-based interface:
-
+List all detected browser profiles:
 ```bash
-floorper-tui
+floorper --cli list
 ```
 
-Or run directly from the source:
-
+Migrate from one browser profile to another:
 ```bash
-python run_floorper_tui.py
+floorper --cli migrate --source "/path/to/source/profile" --target "/path/to/target/profile"
 ```
 
-### Command Line Mode
-
-For advanced users and automation:
-
+Create a backup of a profile:
 ```bash
-floorper --source firefox --target /path/to/floorp/profile --data-types bookmarks,history,passwords
+floorper --cli backup create --profile "/path/to/profile" --browser firefox
 ```
 
-Additional CLI options:
-```
---list-browsers     List all detected browsers
---list-profiles     List all detected profiles
---merge-strategy    Specify merge strategy (smart, overwrite, append)
---backup            Create backup before migration
---verbose           Enable verbose output
---quiet             Suppress all output except errors
+Restore a backup:
+```bash
+floorper --cli backup restore --backup "/path/to/backup.zip" --target "/path/to/restore/directory"
 ```
 
 ## Supported Browsers
 
-### Mainstream Browsers
-- Mozilla Firefox
-- Google Chrome
-- Microsoft Edge
-- Brave
-- Opera
-- Vivaldi
+Floorper supports a wide range of browsers, including:
+
+### Standard Browsers
+- Firefox
+- Chrome
+- Edge
 - Safari
+- Opera
+- Brave
+- Vivaldi
 
 ### Firefox-based Browsers
 - Floorp
-- LibreWolf
 - Waterfox
+- LibreWolf
 - Pale Moon
 - Basilisk
-- SeaMonkey
-- Tor Browser
 
 ### Chromium-based Browsers
 - Chromium
-- Opera GX
-- Yandex Browser
-- SRWare Iron
-- Slimjet
-- Epic Privacy Browser
+- Brave
+- Vivaldi
+- Opera
+- Edge
 
-### Other Browsers
-- GNOME Web (Epiphany)
-- Midori
-- Konqueror
-- Falkon
+### Exotic and Retro Browsers
+- SeaMonkey
+- K-Meleon
 - Otter Browser
-- qutebrowser
-- Dillo
-- NetSurf
-
-### Text-based Browsers
-- ELinks
-- Links
+- Dooble
+- Midori
+- Falkon
+- Qutebrowser
+- Netscape Navigator
+- Internet Explorer
 - Lynx
+- Links
 - w3m
 
-## Screenshots
+## Architecture
 
-![Main Window](docs/images/main_window.png)
-![Browser Selection](docs/images/browser_selection.png)
-![Migration Process](docs/images/migration_process.png)
-![TUI Interface](docs/images/tui_interface.png)
+Floorper is organized into several modules:
+
+- **Core**: Contains the main functionality for browser detection, profile migration, and backup management
+- **Interfaces**: Provides GUI, TUI, and CLI interfaces
+- **Utils**: Contains utility functions and performance optimizations
+- **Browsers**: Contains browser-specific detection and migration logic
 
 ## Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- The Floorp team for their excellent browser
-- All the browser developers whose work makes the web accessible
-- Contributors to the various open-source libraries used in this project
-
-## Related Projects
-
-- [Firefox Session Merger](https://github.com/james-cube/firefox-session-merger)
-- [Firefox Bookmarks Deduplicator](https://github.com/james-cube/firefox-bookmarks-deduplicator)
-- [Firefox Bookmarks Merger](https://github.com/james-cube/firefox-bookmarks-merger)
-- [Firefox History Merger](https://github.com/crazy-max/firefox-history-merger)
+This project is licensed under the MIT License - see the LICENSE file for details.
