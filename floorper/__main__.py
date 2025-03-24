@@ -13,7 +13,6 @@ import os
 import sys
 import logging
 import argparse
-from typing import Dict, List, Optional, Any, Tuple, Union, Set
 
 from floorper.interfaces.cli import FloorperCLI
 from floorper.interfaces.tui import FloorperTUI
@@ -39,15 +38,15 @@ def main():
         epilog="""
 Interface Modes:
   --cli    Command-line interface mode
-  --tui    Text user interface mode (default if no mode specified)
-  --gui    Graphical user interface mode
+  --tui    Text user interface mode
+  --gui    Graphical user interface mode (default if no mode specified)
 
 Examples:
-  # Start the TUI (default)
+  # Start the GUI (default)
   floorper
 
-  # Start the GUI
-  floorper --gui
+  # Start the TUI
+  floorper --tui
 
   # Use CLI mode to list profiles
   floorper --cli list
@@ -60,8 +59,8 @@ Examples:
     # Interface mode arguments
     mode_group = parser.add_argument_group("Interface Mode")
     mode_group.add_argument("--cli", action="store_true", help="Use command-line interface")
-    mode_group.add_argument("--tui", action="store_true", help="Use text user interface (default)")
-    mode_group.add_argument("--gui", action="store_true", help="Use graphical user interface")
+    mode_group.add_argument("--tui", action="store_true", help="Use text user interface")
+    mode_group.add_argument("--gui", action="store_true", help="Use graphical user interface (default)")
     
     # Parse only known args for mode selection
     args, remaining = parser.parse_known_args()
@@ -71,12 +70,12 @@ Examples:
         # CLI mode - pass remaining args to CLI
         sys.argv = [sys.argv[0]] + remaining
         return FloorperCLI().run()
-    elif args.gui:
-        # GUI mode
-        return FloorperGUI().run()
-    else:
-        # Default to TUI mode
+    elif args.tui:
+        # TUI mode
         return FloorperTUI().run()
+    else:
+        # Default to GUI mode
+        return FloorperGUI().run()
 
 if __name__ == "__main__":
     sys.exit(main())
