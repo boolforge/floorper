@@ -1,0 +1,7 @@
+<!-- Simple SVG icon for Links browser -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect x="10" y="10" width="80" height="80" rx="10" fill="#444444" />
+  <text x="50" y="55" font-family="Arial" font-size="16" fill="white" text-anchor="middle">LINKS</text>
+  <path d="M25,65 L45,45 M55,45 L75,65" stroke="#6699CC" stroke-width="4" />
+  <path d="M40,35 L60,35" stroke="#6699CC" stroke-width="4" />
+</svg>
