@@ -23,12 +23,21 @@ sys.path.append(os.path.abspath('.'))
 from floorper.core.browser_detector import BrowserDetector
 from floorper.core.profile_migrator import ProfileMigrator
 
-# Base directory for test profiles
-TEST_PROFILES_DIR = Path("test_profiles")
-TEST_RESULTS_DIR = Path("test_results")
-
-# Ensure the test results directory exists
-TEST_RESULTS_DIR.mkdir(exist_ok=True)
+@pytest.fixture(autouse=True)
+def setup_test_directories(tmp_path):
+    """Fixture para crear estructura de directorios de prueba"""
+    test_profiles = tmp_path / "test_profiles"
+    test_profiles.mkdir()
+    
+    # Crear perfiles de prueba básicos
+    (test_profiles / "firefox").mkdir()
+    (test_profiles / "chrome").mkdir()
+    
+    # Configurar paths globales
+    global TEST_PROFILES_DIR, TEST_RESULTS_DIR
+    TEST_PROFILES_DIR = test_profiles
+    TEST_RESULTS_DIR = tmp_path / "test_results"
+    TEST_RESULTS_DIR.mkdir()
 
 # Mejorar el sistema de logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -41,7 +50,7 @@ def mock_profile_dir(tmp_path):
     profile_dir.mkdir()
     return profile_dir
 
-def test_detection_with_mock(mock_profile_dir):
+def test_detection_with_mock():
     """Prueba con mock de sistema de archivos"""
     with patch("pathlib.Path.iterdir") as mock_iterdir:
         mock_iterdir.return_value = [MagicMock(is_dir=lambda: True, name="firefox")]
@@ -50,6 +59,7 @@ def test_detection_with_mock(mock_profile_dir):
         results = detector.detect_all_profiles()
         
         assert "firefox" in results
+        assert results["firefox"]["version"] == "100.0"
 
 def test_browser_detection() -> Dict[str, Any]:
     """Test mejorado con manejo de errores y tipos"""

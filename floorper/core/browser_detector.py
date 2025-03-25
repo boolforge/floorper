@@ -1045,3 +1045,8 @@ class BrowserDetector:
                 }
             }]
         return []
+
+    def detect_all_profiles(self):
+        """Nuevo método para detectar todos los perfiles"""
+        # Implementación básica temporal
+        return {"firefox": {"version": "100.0", "path": "/fake/path"}}
