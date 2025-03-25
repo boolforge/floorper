@@ -1,0 +1,236 @@
+# Floorper
+
+<<<<<<< HEAD
+Floorper is a comprehensive browser profile management tool that combines the functionality of Floorpizer and BrowserMigration. It provides robust capabilities for detecting, migrating, and managing browser profiles with a special focus on Firefox-based browsers, particularly Floorp.
+
+## Features
+
+- **Multi-browser Support**: Detects and manages profiles from various browsers, with specialized support for Firefox-based browsers including Floorp, Waterfox, LibreWolf, Pale Moon, and Basilisk.
+- **Profile Migration**: Migrate profiles between different browsers, preserving bookmarks, history, passwords, cookies, extensions, and preferences.
+- **Backup & Restore**: Create and restore backups of browser profiles to protect your data.
+- **Multiple Interfaces**: Choose between GUI, TUI, or CLI based on your preferences and environment.
+- **Cross-platform**: Works on Windows, macOS, and Linux.
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/boolforge/floorper.git
+cd floorper
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+python -m floorper
+=======
+Floorper is a comprehensive browser profile migration and management tool that allows users to detect, backup, restore, and migrate profiles between different browsers.
+
+## Features
+
+- **Multi-browser Support**: Detect and migrate profiles from various browsers, including exotic and retro browsers
+- **Multiple Interfaces**: Choose between GUI (PyQt6), TUI (Textual), or CLI interfaces
+- **Profile Migration**: Migrate bookmarks, history, cookies, passwords, and other data between browsers
+- **Backup & Restore**: Create and manage backups of browser profiles
+- **Performance Optimized**: Utilizes caching and parallel processing for efficient operations
+- **Cross-platform**: Works on Windows, macOS, and Linux
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- PyQt6 (for GUI interface)
+- Textual (for TUI interface)
+
+### Install from PyPI
+
+```bash
+pip install floorper
+```
+
+### Install from Source
+
+```bash
+git clone https://github.com/boolforge/floorper.git
+cd floorper
+pip install -e .
+>>>>>>> local-work
+```
+
+## Usage
+
+### Graphical User Interface (GUI)
+
+<<<<<<< HEAD
+The GUI provides an intuitive way to interact with Floorper. Simply run the application without any arguments to launch the GUI (if available):
+
+```bash
+python -m floorper
+=======
+```bash
+floorper --gui
+>>>>>>> local-work
+```
+
+### Text User Interface (TUI)
+
+<<<<<<< HEAD
+The TUI provides a terminal-based interface with rich visual elements:
+
+```bash
+python -m floorper --tui
+=======
+```bash
+floorper
+# or
+floorper --tui
+>>>>>>> local-work
+```
+
+### Command Line Interface (CLI)
+
+<<<<<<< HEAD
+The CLI provides powerful command-line options for scripting and automation:
+
+```bash
+# Show help
+python -m floorper --help
+
+# Detect installed browsers
+python -m floorper --detect
+
+# List profiles for a specific browser
+python -m floorper --list-profiles firefox
+
+# Migrate from one profile to another
+python -m floorper --migrate firefox:default floorp:imported
+
+# Create a backup of a profile
+python -m floorper --backup firefox:default
+
+# Restore a backup
+python -m floorper --restore backup_file.zip floorp:restored
+```
+
+## Project Structure
+
+```
+floorper/
+├── browsers/              # Browser-specific modules
+│   ├── handlers/          # Handlers for specific browsers
+│   │   └── firefox_handler.py
+│   └── firefox_based.py   # Handler for Firefox-based browsers
+├── core/                  # Core functionality
+│   ├── browser_detector.py
+│   ├── profile_migrator.py
+│   └── backup_manager.py
+├── interfaces/            # User interfaces
+│   ├── cli.py             # Command Line Interface
+│   ├── gui.py             # Graphical User Interface
+│   └── tui.py             # Text User Interface
+├── utils/                 # Utility modules
+│   ├── platform/          # Platform-specific utilities
+│   └── app_info/          # Application information
+├── __main__.py            # Entry point
+└── requirements.txt       # Dependencies
+```
+
+## Dependencies
+
+- **PyQt6**: For the graphical user interface
+- **Textual**: For the text user interface
+- **Rich**: For enhanced terminal output
+- **pathlib**: For cross-platform path handling
+- **sqlite3**: For browser database access
+=======
+List all detected browser profiles:
+```bash
+floorper --cli list
+```
+
+Migrate from one browser profile to another:
+```bash
+floorper --cli migrate --source "/path/to/source/profile" --target "/path/to/target/profile"
+```
+
+Create a backup of a profile:
+```bash
+floorper --cli backup create --profile "/path/to/profile" --browser firefox
+```
+
+Restore a backup:
+```bash
+floorper --cli backup restore --backup "/path/to/backup.zip" --target "/path/to/restore/directory"
+```
+
+## Supported Browsers
+
+Floorper supports a wide range of browsers, including:
+
+### Standard Browsers
+- Firefox
+- Chrome
+- Edge
+- Safari
+- Opera
+- Brave
+- Vivaldi
+
+### Firefox-based Browsers
+- Floorp
+- Waterfox
+- LibreWolf
+- Pale Moon
+- Basilisk
+
+### Chromium-based Browsers
+- Chromium
+- Brave
+- Vivaldi
+- Opera
+- Edge
+
+### Exotic and Retro Browsers
+- SeaMonkey
+- K-Meleon
+- Otter Browser
+- Dooble
+- Midori
+- Falkon
+- Qutebrowser
+- Netscape Navigator
+- Internet Explorer
+- Lynx
+- Links
+- w3m
+
+## Architecture
+
+Floorper is organized into several modules:
+
+- **Core**: Contains the main functionality for browser detection, profile migration, and backup management
+- **Interfaces**: Provides GUI, TUI, and CLI interfaces
+- **Utils**: Contains utility functions and performance optimizations
+- **Browsers**: Contains browser-specific detection and migration logic
+>>>>>>> local-work
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+<<<<<<< HEAD
+## License
+
+This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
+=======
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+>>>>>>> local-work
