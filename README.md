@@ -1,3 +1,7 @@
+[![PyPI Version](https://img.shields.io/pypi/v/floorper)](https://pypi.org/project/floorper/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI Status](https://github.com/boolforge/floorper/actions/workflows/tests.yml/badge.svg)](https://github.com/boolforge/floorper/actions)
+
 # Floorper
 
 Floorper is a comprehensive browser profile migration and management tool that allows users to detect, backup, restore, and migrate profiles between different browsers.
