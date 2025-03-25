@@ -1,78 +1,137 @@
 """
-Floorper - Platform Detection Utilities
+Floorper - Platform Utilities Module
 
-This module provides platform detection and platform-specific functionality.
+This module provides platform-specific utilities.
 """
 
 import os
 import sys
 import platform
-from typing import Dict, Any, Optional
+import subprocess
+from pathlib import Path
 
-def get_platform() -> str:
-    """
-    Detect the current platform.
-    
-    Returns:
-        Platform identifier (windows, macos, linux, haiku, os2, other)
-    """
-    system = platform.system().lower()
-    
-    if system == "windows":
-        return "windows"
-    elif system == "darwin":
-        return "macos"
-    elif system == "linux":
-        return "linux"
-    elif system == "haiku":
-        return "haiku"
-    elif system == "os/2":
-        return "os2"
+def is_windows():
+    """Check if the current platform is Windows."""
+    return platform.system() == "Windows"
+
+def is_macos():
+    """Check if the current platform is macOS."""
+    return platform.system() == "Darwin"
+
+def is_linux():
+    """Check if the current platform is Linux."""
+    return platform.system() == "Linux"
+
+def get_home_dir():
+    """Get the user's home directory."""
+    return Path.home()
+
+def has_display():
+    """Check if a display is available for GUI applications."""
+    if is_windows():
+        return True
+    elif is_macos():
+        return True
     else:
-        return "other"
+        return "DISPLAY" in os.environ
 
-def get_platform_info() -> Dict[str, Any]:
-    """
-    Get detailed information about the current platform.
+def get_installed_browsers():
+    """Get a list of installed browsers on the system."""
+    browsers = []
     
-    Returns:
-        Dictionary containing platform information
-    """
-    return {
-        "system": platform.system(),
-        "release": platform.release(),
-        "version": platform.version(),
-        "machine": platform.machine(),
-        "processor": platform.processor(),
-        "python_version": platform.python_version(),
-        "platform_id": get_platform()
-    }
+    if is_windows():
+        # Check common Windows browser locations
+        program_files = os.environ.get("ProgramFiles", "C:\\Program Files")
+        program_files_x86 = os.environ.get("ProgramFiles(x86)", "C:\\Program Files (x86)")
+        
+        browser_paths = [
+            (Path(program_files) / "Mozilla Firefox" / "firefox.exe", "firefox"),
+            (Path(program_files_x86) / "Mozilla Firefox" / "firefox.exe", "firefox"),
+            (Path(program_files) / "Floorp" / "floorp.exe", "floorp"),
+            (Path(program_files_x86) / "Floorp" / "floorp.exe", "floorp"),
+            (Path(program_files) / "Waterfox" / "waterfox.exe", "waterfox"),
+            (Path(program_files_x86) / "Waterfox" / "waterfox.exe", "waterfox"),
+            (Path(program_files) / "LibreWolf" / "librewolf.exe", "librewolf"),
+            (Path(program_files_x86) / "LibreWolf" / "librewolf.exe", "librewolf"),
+            (Path(program_files) / "Pale Moon" / "palemoon.exe", "pale_moon"),
+            (Path(program_files_x86) / "Pale Moon" / "palemoon.exe", "pale_moon"),
+            (Path(program_files) / "Basilisk" / "basilisk.exe", "basilisk"),
+            (Path(program_files_x86) / "Basilisk" / "basilisk.exe", "basilisk"),
+        ]
+        
+        for path, browser_id in browser_paths:
+            if path.exists():
+                browsers.append(browser_id)
+    
+    elif is_macos():
+        # Check common macOS browser locations
+        applications = Path("/Applications")
+        
+        browser_paths = [
+            (applications / "Firefox.app", "firefox"),
+            (applications / "Floorp.app", "floorp"),
+            (applications / "Waterfox.app", "waterfox"),
+            (applications / "LibreWolf.app", "librewolf"),
+            (applications / "Pale Moon.app", "pale_moon"),
+            (applications / "Basilisk.app", "basilisk"),
+        ]
+        
+        for path, browser_id in browser_paths:
+            if path.exists():
+                browsers.append(browser_id)
+    
+    else:  # Linux and others
+        # Check if browsers are in PATH
+        browser_commands = [
+            ("firefox", "firefox"),
+            ("floorp", "floorp"),
+            ("waterfox", "waterfox"),
+            ("librewolf", "librewolf"),
+            ("palemoon", "pale_moon"),
+            ("basilisk", "basilisk"),
+        ]
+        
+        for command, browser_id in browser_commands:
+            try:
+                result = subprocess.run(
+                    ["which", command],
+                    capture_output=True,
+                    text=True
+                )
+                if result.returncode == 0:
+                    browsers.append(browser_id)
+            except Exception:
+                pass
+    
+    return browsers
 
-def get_home_directory() -> str:
-    """
-    Get the user's home directory in a platform-independent way.
+def open_directory(path):
+    """Open a directory in the file explorer."""
+    path = Path(path)
     
-    Returns:
-        Path to the user's home directory
-    """
-    return os.path.expanduser("~")
-
-def get_app_data_directory() -> str:
-    """
-    Get the appropriate application data directory for the current platform.
+    if not path.exists():
+        return False
     
-    Returns:
-        Path to the application data directory
-    """
-    platform_id = get_platform()
-    
-    if platform_id == "windows":
-        return os.path.join(os.environ.get("APPDATA", ""), "Floorper")
-    elif platform_id == "macos":
-        return os.path.join(get_home_directory(), "Library", "Application Support", "Floorper")
-    else:  # Linux, Haiku, etc.
-        xdg_config_home = os.environ.get("XDG_CONFIG_HOME")
-        if xdg_config_home:
-            return os.path.join(xdg_config_home, "floorper")
+    try:
+        if is_windows():
+            os.startfile(path)
+        elif is_macos():
+            subprocess.run(["open", path])
         else:
-            return os.path.join(get_home_directory(), ".config", "floorper")
+            subprocess.run(["xdg-open", path])
+        return True
+    except Exception:
+        return False
+
+def open_url(url):
+    """Open a URL in the default browser."""
+    try:
+        if is_windows():
+            os.startfile(url)
+        elif is_macos():
+            subprocess.run(["open", url])
+        else:
+            subprocess.run(["xdg-open", url])
+        return True
+    except Exception:
+        return False

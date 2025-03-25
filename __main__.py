@@ -1,15 +1,28 @@
 """
-Floorper - Main Entry Point
+Floorper - Main Module
 
-This module serves as the main entry point for the Floorper application,
-providing automatic interface selection based on environment and command-line arguments.
+This module serves as the entry point for the Floorper application, which provides
+functionality for detecting, migrating, and managing browser profiles with a focus
+on Firefox-based browsers, especially Floorp.
+
+The application supports three interfaces:
+- GUI: Graphical User Interface using PyQt6
+- TUI: Text User Interface using Textual
+- CLI: Command Line Interface using argparse
+
+Usage:
+    python -m floorper          # Launches GUI if available, falls back to TUI or CLI
+    python -m floorper --tui    # Forces TUI mode
+    python -m floorper --cli    # Forces CLI mode
+    python -m floorper --help   # Shows help message
 """
 
 import os
 import sys
-import argparse
+import platform
 import logging
-from typing import Optional, List, Dict, Any
+import argparse
+from pathlib import Path
 
 # Setup logging
 logging.basicConfig(
@@ -18,193 +31,137 @@ logging.basicConfig(
 )
 logger = logging.getLogger('floorper')
 
-def main(args: Optional[List[str]] = None) -> int:
-    """
-    Main entry point for the Floorper application.
-    
-    Args:
-        args: Command-line arguments (defaults to sys.argv[1:])
-        
-    Returns:
-        Exit code (0 for success, non-zero for errors)
-    """
-    if args is None:
-        args = sys.argv[1:]
-    
-    # Parse command-line arguments
+def main():
+    """Main entry point for the application."""
+    # Parse command line arguments
     parser = argparse.ArgumentParser(
-        description="Floorper - Universal Browser Profile Migration Tool for Floorp"
+        description='Floorper - Browser Profile Migration Tool'
     )
     parser.add_argument(
-        "--gui", 
-        action="store_true", 
-        help="Start with graphical user interface"
+        '--gui',
+        action='store_true',
+        help='Force GUI mode'
     )
     parser.add_argument(
-        "--tui", 
-        action="store_true", 
-        help="Start with text-based user interface"
+        '--tui',
+        action='store_true',
+        help='Force TUI mode'
     )
     parser.add_argument(
-        "--cli", 
-        action="store_true", 
-        help="Start with command-line interface"
+        '--cli',
+        action='store_true',
+        help='Force CLI mode'
     )
     parser.add_argument(
-        "--verbose", "-v", 
-        action="store_true", 
-        help="Enable verbose logging"
+        '--debug',
+        action='store_true',
+        help='Enable debug logging'
     )
     parser.add_argument(
-        "--version", 
-        action="store_true", 
-        help="Show version information and exit"
+        '--version',
+        action='store_true',
+        help='Show version information'
     )
     
     # Add CLI-specific arguments
-    cli_group = parser.add_argument_group("CLI options")
-    cli_group.add_argument(
-        "command", 
-        nargs="?", 
-        help="CLI command (list, migrate, backup, restore)"
+    parser.add_argument(
+        '--detect',
+        action='store_true',
+        help='Detect installed browsers'
     )
-    cli_group.add_argument(
-        "--source", 
-        help="Source profile path for migration"
+    parser.add_argument(
+        '--list-profiles',
+        metavar='BROWSER',
+        help='List profiles for a specific browser'
     )
-    cli_group.add_argument(
-        "--target", 
-        help="Target profile path for migration or restoration"
+    parser.add_argument(
+        '--migrate',
+        nargs=2,
+        metavar=('SOURCE', 'TARGET'),
+        help='Migrate from SOURCE to TARGET (format: browser:profile)'
     )
-    cli_group.add_argument(
-        "--profile", 
-        help="Profile path for backup"
+    parser.add_argument(
+        '--backup',
+        metavar='BROWSER:PROFILE',
+        help='Create backup of a browser profile'
     )
-    cli_group.add_argument(
-        "--browser", 
-        help="Browser type for operations"
-    )
-    cli_group.add_argument(
-        "--backup", 
-        help="Backup file path for restoration"
+    parser.add_argument(
+        '--restore',
+        nargs=2,
+        metavar=('BACKUP_FILE', 'TARGET'),
+        help='Restore backup to a target location'
     )
     
-    parsed_args = parser.parse_args(args)
+    args = parser.parse_args()
     
-    # Configure logging
-    if parsed_args.verbose:
+    # Set debug logging if requested
+    if args.debug:
         logging.getLogger('floorper').setLevel(logging.DEBUG)
     
-    # Show version and exit if requested
-    if parsed_args.version:
-        from utils.app_info import get_app_info
-        app_info = get_app_info()
-        print(f"Floorper {app_info['version']}")
-        print(f"Running on {app_info['platform']} with Python {app_info['python_version']}")
-        return 0
+    # Show version if requested
+    if args.version:
+        from utils.app_info import get_version
+        print(f"Floorper version {get_version()}")
+        return
     
     # Determine which interface to use
-    if parsed_args.gui:
-        return _run_gui()
-    elif parsed_args.cli:
-        return _run_cli(parsed_args)
-    elif parsed_args.tui:
-        return _run_tui()
+    if args.gui:
+        use_gui = True
+        use_tui = False
+        use_cli = False
+    elif args.tui:
+        use_gui = False
+        use_tui = True
+        use_cli = False
+    elif args.cli:
+        use_gui = False
+        use_tui = False
+        use_cli = True
     else:
-        # Auto-detect: Use GUI if available, otherwise TUI, finally CLI
-        if _is_gui_available():
-            return _run_gui()
-        else:
-            return _run_tui()
-
-def _is_gui_available() -> bool:
-    """
-    Check if GUI is available.
+        # Auto-detect based on environment and available interfaces
+        use_gui = _can_use_gui()
+        use_tui = not use_gui and _can_use_tui()
+        use_cli = not use_gui and not use_tui
     
-    Returns:
-        True if GUI is available, False otherwise
-    """
+    # Launch appropriate interface
+    if use_gui:
+        logger.info("Starting GUI interface")
+        from interfaces.gui import start_gui
+        start_gui()
+    elif use_tui:
+        logger.info("Starting TUI interface")
+        from interfaces.tui import start_tui
+        start_tui()
+    else:
+        logger.info("Starting CLI interface")
+        from interfaces.cli import handle_cli_args
+        handle_cli_args(args)
+
+def _can_use_gui():
+    """Check if GUI can be used."""
     # Check if running in a graphical environment
-    if os.environ.get('DISPLAY') or os.name == 'nt' or sys.platform == 'darwin':
-        try:
-            # Try to import PyQt6
-            from PyQt6.QtWidgets import QApplication
-            return True
-        except ImportError:
-            return False
-    return False
-
-def _run_gui() -> int:
-    """
-    Run the GUI interface.
+    if not os.environ.get('DISPLAY') and platform.system() != 'Windows':
+        return False
     
-    Returns:
-        Exit code
-    """
+    # Check if PyQt6 is available
     try:
-        from interfaces.gui import FloorperGUI
-        app = FloorperGUI()
-        return app.run()
-    except ImportError as e:
-        logger.error(f"Failed to start GUI: {e}")
-        logger.error("Please install PyQt6 with: pip install PyQt6")
-        return 1
+        import PyQt6
+        return True
+    except ImportError:
+        return False
 
-def _run_tui() -> int:
-    """
-    Run the TUI interface.
+def _can_use_tui():
+    """Check if TUI can be used."""
+    # Check if running in a terminal
+    if not sys.stdout.isatty():
+        return False
     
-    Returns:
-        Exit code
-    """
+    # Check if Textual is available
     try:
-        from interfaces.tui import FloorperTUI
-        app = FloorperTUI()
-        return app.run()
-    except ImportError as e:
-        logger.error(f"Failed to start TUI: {e}")
-        logger.error("Please install Textual with: pip install textual")
-        return 1
-
-def _run_cli(args: argparse.Namespace) -> int:
-    """
-    Run the CLI interface.
-    
-    Args:
-        args: Parsed command-line arguments
-        
-    Returns:
-        Exit code
-    """
-    from interfaces.cli import FloorperCLI
-    cli = FloorperCLI()
-    
-    if not args.command:
-        logger.error("No command specified for CLI mode")
-        return 1
-    
-    if args.command == "list":
-        cli.list_browsers()
-    elif args.command == "migrate":
-        if not args.source or not args.target:
-            logger.error("Source and target profiles must be specified for migration")
-            return 1
-        cli.migrate_profile(args.source, args.target)
-    elif args.command == "backup":
-        if not args.profile or not args.browser:
-            logger.error("Profile and browser must be specified for backup")
-            return 1
-        cli.backup_profile(args.profile, args.browser)
-    elif args.command == "restore":
-        if not args.backup or not args.target:
-            logger.error("Backup file and target directory must be specified for restoration")
-            return 1
-        cli.restore_backup(args.backup, args.target)
-    else:
-        logger.error(f"Unknown command: {args.command}")
-        return 1
-    
-    return 0
+        import textual
+        return True
+    except ImportError:
+        return False
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
